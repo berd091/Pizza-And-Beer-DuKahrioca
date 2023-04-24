@@ -13,7 +13,7 @@ import {
 const categoryNames = ['Carnívoras', 'Vegetarianas', 'Lotadas de Molho', 'Recomendações do Chef']
 const sortItems = [
   { name: 'Avaliação', type: 'rating', order: 'desc' },
-  { name: 'Preço', type: 'price', order: 'desc' },
+  { name: 'Preço', type: 'price', order: 'asc' },
   { name: 'A-Z', type: 'name', order: 'asc' },
 ]
 
