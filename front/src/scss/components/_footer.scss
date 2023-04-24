@@ -1,0 +1,38 @@
+@import '../variables';
+
+.footer {
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 25px 0;
+  background-color: #735441;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+      img {
+        margin-left: 10px;
+      }
+  }
+
+  @media (max-width: 768px) {
+    &--cart {
+      margin-top: 30px;
+    }
+  }
+
+    p {
+      color: white;
+      font-size: 20px;
+    }
+  }
