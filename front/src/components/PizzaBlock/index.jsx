@@ -70,7 +70,7 @@ export default function PizzaBlock({id, name, imageUrl, price, types, sizes, rat
         </div>
         <div className="pizza-block--bottom">
           <div className="pizza-block--price">
-            {price} R$
+             R$ {price},00
           </div>
           <Button 
             onClick={onAddPizza} 

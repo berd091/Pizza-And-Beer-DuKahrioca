@@ -80,8 +80,8 @@ const Cart = () => {
               </div>
               <div className="cart--bottom">
                 <div className="cart--bottom-details">
-                  <span> Total de Pizzas: <b>{totalCount} pizzas.</b> </span>
-                  <span> Valor do pedido: <b> R$ {totalPrice}</b> </span>
+                  <span> Total de Pizzas: <b>{totalCount} pizza(s).</b> </span>
+                  <span> Valor do pedido: <b> R$ {totalPrice},00</b> </span>
                 </div>
                 <div className="cart--bottom-buttons">
                 <Link to="/" className="button button--outline button--add go-back-btn">

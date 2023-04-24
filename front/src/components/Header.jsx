@@ -13,7 +13,7 @@ const Header = () => {
       <div className='container'>
         <Link to='/'>
           <div className='header--logo'>
-            <img width={250} src={logoSvg} alt='Pizza logo' />
+            <img width={250} src={logoSvg} alt='Pizza&Beer logo' />
             <div>
               <br></br>
               <p>O melhor delivery de pizzas da cidade</p>

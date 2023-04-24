@@ -10,7 +10,7 @@ import {
   PizzaLoadingBlock,
 } from '../components'
 
-const categoryNames = ['Carnívoras', 'Vegetarianas', 'Lotadas de Molho', 'Recomendações do Chef']
+const categoryNames = ['Carnívoras', 'Vegetarianas', 'Lotadas de Molho', 'Recomendações do Chef', 'Bebidas']
 const sortItems = [
   { name: 'Avaliação', type: 'rating', order: 'desc' },
   { name: 'Preço', type: 'price', order: 'asc' },

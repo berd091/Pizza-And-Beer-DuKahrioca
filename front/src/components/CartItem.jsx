@@ -33,7 +33,7 @@ const CartItem = ({
       <div className='cart--item-info'>
         <h3>{name}</h3>
         <p>
-          {type} massa, {size} cm.
+           Massa {type}, {size} cm.
         </p>
       </div>
       <div className='cart--item-count'>
@@ -79,7 +79,7 @@ const CartItem = ({
       </div>
       <div className='cart--item-price'>
         <b>
-          {totalPrice} R$
+           R$ {totalPrice},00
         </b>
       </div>
       <div className='cart--item-remove'>
