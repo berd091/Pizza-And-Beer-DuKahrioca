@@ -13,7 +13,7 @@ const AcceptedOrder = () => {
           Bom apetite!
         </p>
         <img height={300} width={200} src={acceptedImg} alt="img" />
-        <Link to="/" className="button button--black">
+        <Link to="/home" className="button button--black">
           <span>Ir para o menu</span>
         </Link>
       </div>

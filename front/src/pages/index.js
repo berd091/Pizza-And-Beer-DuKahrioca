@@ -1,3 +1,5 @@
 export { default as Home } from './Home.jsx'
 export { default as Cart } from './Cart.jsx'
 export { default as AcceptedOrder } from './AcceptedOrder.jsx'
+export { default as Login } from './Login.jsx'
+export { default as Cadastro } from './Cadastro.jsx'

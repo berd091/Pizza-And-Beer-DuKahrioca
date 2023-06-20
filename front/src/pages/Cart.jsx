@@ -4,6 +4,7 @@ import { Link, useHistory } from 'react-router-dom'
 import { clearCart, removeCartItem, minusCartItem, plusCartItem } from '../redux/actions/cart'
 import { CartItem, Button } from '../components'
 import emptyCartImg from '../assets/img/empty-cart.png'
+import axios from 'axios';
 
 const Cart = () => {
   const history = useHistory()
@@ -34,10 +35,33 @@ const Cart = () => {
 
 	const onClickOrder = () => {
     if (window.confirm('Confirmar o pagamento?')) {
-      dispatch(clearCart())
-      history.push("/accepted")
+      const orderData = {
+        items: addedPizzas.map(obj => ({
+          id: obj.id,
+          name: obj.name,
+          type: obj.type,
+          size: obj.size,
+          imageUrl: obj.imageUrl,
+          totalPrice: items[obj.id].totalPrice,
+          totalCount: items[obj.id].items.length,
+        })),
+        totalPrice: totalPrice,
+        totalCount: totalCount,
+      };
+  
+      // Envia o pedido para a API usando o Axios
+      axios
+        .post('http://localhost:5000/api/pedidos', orderData)
+        .then((response) => {
+          console.log(response.data);
+          dispatch(clearCart());
+          history.push("/accepted");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     }
-	}
+  };
 
 	return (
     <div className="content">
