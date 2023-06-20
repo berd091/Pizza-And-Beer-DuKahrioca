@@ -1,19 +1,16 @@
-const { MongoClient } = require('mongodb');
+const mongoose = require('mongoose');
 
-const url = 'mongodb://localhost:27017'; // URL de conexão com o MongoDB
-const dbName = 'meuBancoDeDados'; // Nome do banco de dados que você deseja conectar
+// URI de conexão do MongoDB Atlas
+const uri = 'mongodb+srv://bernardo:dukahrioca0123@cluster0.m6pbtrx.mongodb.net/?retryWrites=true&w=majority';
 
-// Função para conectar ao MongoDB e retornar a instância do banco de dados
-async function connectToMongo() {
-  try {
-    const client = await MongoClient.connect(url);
-    const db = client.db(dbName);
-    console.log('Conexão bem-sucedida com o MongoDB!');
-    return db;
-  } catch (error) {
-    console.error('Erro ao conectar ao MongoDB:', error);
-    throw error;
-  }
-}
-
-module.exports = connectToMongo;
+// Configuração e conexão com o banco de dados
+mongoose.connect(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+  .then(() => {
+    console.log('Conectado ao banco de dados!');
+  })
+  .catch((error) => {
+    console.error('Erro ao conectar ao banco de dados:', error);
+  });
