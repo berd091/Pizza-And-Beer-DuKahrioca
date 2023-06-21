@@ -12,6 +12,7 @@ const Cadastro = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const history = useHistory();
+  const [message, setMessage] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,7 +30,7 @@ const Cadastro = () => {
         history.push('/login');
       })
       .catch((error) => {
-        // Tratar erros, como exibir uma mensagem de erro para o usuário
+        setMessage(error.response.data.message);
         console.log(error);
       });
   };
@@ -74,6 +75,11 @@ const Cadastro = () => {
             }}
           />
           <br />
+          {message && (
+          <p style={{ color: 'red', fontStyle: 'italic', fontWeight: 'bold' }}>
+            {message}
+          </p>
+        )}
           <Button
             type="submit"
             variant="contained"
